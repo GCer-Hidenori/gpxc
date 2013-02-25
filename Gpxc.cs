@@ -2,11 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NDesk.Options;    //http://www.ndesk.org/Options
-using Ionic.Zip;
-// Ionic.Zip.dll を利用。
-//   http://dotnetzip.codeplex.com/
+using NDesk.Options;    
+using Ionic.Zip;	//DotNetZip
 
+/*
+Options.cs
+Authors:
+Jonathan Pryor <jpryor@novell.com>
+Copyright (C) 2008 Novell (http://www.novell.com)
+NDesk.Options is released under the MIT/X11 license. 
+http://www.ndesk.org/Options
+ */
+
+/*
+DotNetZip
+(c) 2006-2013 Microsoft
+Microsoft Public License (Ms-PL)
+http://dotnetzip.codeplex.com/
+*/
 namespace GpxcApplication
 {
     class Gpxc
