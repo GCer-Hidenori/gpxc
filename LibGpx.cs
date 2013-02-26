@@ -20,7 +20,6 @@ namespace GpxcApplication
                      bool wpt = false;
                      while (sr.EndOfStream==false)
                      {
-                        //sw.WriteLine(LibGpx.decode(sr.ReadLine()));
                          string line = sr.ReadLine();
                          if(line.IndexOf("<wpt") > 0)wpt = true;
                          var match = Regex.Match(line,@"<name>(.*)</name>");
@@ -50,6 +49,7 @@ namespace GpxcApplication
                              else sw.WriteLine(line);
                          }
                      }
+                     sw.Flush();
                 }
             }
             System.IO.File.Delete(tmp_filename);
@@ -107,7 +107,7 @@ namespace GpxcApplication
                 unicode_code = Convert.ToInt32(arg2, 16);
             }
 
-            int[] skip_codes = { 62,60,38 };    //処理しないコード
+            //int[] skip_codes = { 62,60,38 };    //処理しないコード
             //if (skip_codes.Contains(unicode_code))
             if (unicode_code == 62 || unicode_code == 60 || unicode_code == 38)
             {

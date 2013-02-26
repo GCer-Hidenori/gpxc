@@ -62,6 +62,7 @@ namespace GpxcApplication
                     {
                         sw.WriteLine(LibGpx.decode(sr.ReadLine()));
                     };
+                    sw.Flush();
                 }
               
             }
